@@ -1,0 +1,422 @@
+{
+  "name": "rayshot",
+  "version": "0.1.0",
+  "title": "Rayshot",
+  "description": "Screenshot utility for Raycast",
+  "icon": "rayshot.png",
+  "author": "alvgaona",
+  "categories": [
+    "Productivity",
+    "System"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "capture-area",
+      "title": "Capture Area",
+      "subtitle": "Rayshot",
+      "description": "Capture a selected area of the screen",
+      "mode": "view",
+      "keywords": [
+        "screenshot",
+        "area",
+        "selection",
+        "snip"
+      ],
+      "preferences": [
+        {
+          "name": "showPreview",
+          "type": "checkbox",
+          "required": false,
+          "title": "Show Preview",
+          "description": "Show preview after capture (if disabled, uses default action)",
+          "default": true,
+          "label": "Show preview after capture"
+        },
+        {
+          "name": "defaultAction",
+          "type": "dropdown",
+          "required": false,
+          "title": "Default Action",
+          "description": "Action to perform when preview is disabled",
+          "default": "copy",
+          "data": [
+            {
+              "title": "Copy to Clipboard",
+              "value": "copy"
+            },
+            {
+              "title": "Save to File",
+              "value": "save"
+            },
+            {
+              "title": "Copy and Save",
+              "value": "both"
+            }
+          ]
+        },
+        {
+          "name": "saveLocation",
+          "type": "directory",
+          "required": false,
+          "title": "Save Location",
+          "description": "Where to save screenshots (overrides global setting)"
+        }
+      ]
+    },
+    {
+      "name": "capture-window",
+      "title": "Capture Window",
+      "subtitle": "Rayshot",
+      "description": "Capture a specific window",
+      "mode": "view",
+      "keywords": [
+        "screenshot",
+        "window"
+      ],
+      "preferences": [
+        {
+          "name": "showPreview",
+          "type": "checkbox",
+          "required": false,
+          "title": "Show Preview",
+          "description": "Show preview after capture (if disabled, uses default action)",
+          "default": true,
+          "label": "Show preview after capture"
+        },
+        {
+          "name": "defaultAction",
+          "type": "dropdown",
+          "required": false,
+          "title": "Default Action",
+          "description": "Action to perform when preview is disabled",
+          "default": "copy",
+          "data": [
+            {
+              "title": "Copy to Clipboard",
+              "value": "copy"
+            },
+            {
+              "title": "Save to File",
+              "value": "save"
+            },
+            {
+              "title": "Copy and Save",
+              "value": "both"
+            }
+          ]
+        },
+        {
+          "name": "saveLocation",
+          "type": "directory",
+          "required": false,
+          "title": "Save Location",
+          "description": "Where to save screenshots (overrides global setting)"
+        }
+      ]
+    },
+    {
+      "name": "capture-fullscreen",
+      "title": "Capture Fullscreen",
+      "subtitle": "Rayshot",
+      "description": "Capture the entire screen",
+      "mode": "view",
+      "keywords": [
+        "screenshot",
+        "fullscreen",
+        "screen"
+      ],
+      "preferences": [
+        {
+          "name": "showPreview",
+          "type": "checkbox",
+          "required": false,
+          "title": "Show Preview",
+          "description": "Show preview after capture (if disabled, uses default action)",
+          "default": true,
+          "label": "Show preview after capture"
+        },
+        {
+          "name": "defaultAction",
+          "type": "dropdown",
+          "required": false,
+          "title": "Default Action",
+          "description": "Action to perform when preview is disabled",
+          "default": "copy",
+          "data": [
+            {
+              "title": "Copy to Clipboard",
+              "value": "copy"
+            },
+            {
+              "title": "Save to File",
+              "value": "save"
+            },
+            {
+              "title": "Copy and Save",
+              "value": "both"
+            }
+          ]
+        },
+        {
+          "name": "saveLocation",
+          "type": "directory",
+          "required": false,
+          "title": "Save Location",
+          "description": "Where to save screenshots (overrides global setting)"
+        }
+      ]
+    },
+    {
+      "name": "capture-area-file",
+      "title": "Capture Area to File",
+      "subtitle": "Rayshot",
+      "description": "Capture area and save to file",
+      "mode": "no-view",
+      "keywords": [
+        "screenshot",
+        "area",
+        "save",
+        "disk",
+        "file"
+      ]
+    },
+    {
+      "name": "capture-window-file",
+      "title": "Capture Window to File",
+      "subtitle": "Rayshot",
+      "description": "Capture window and save to file",
+      "mode": "no-view",
+      "keywords": [
+        "screenshot",
+        "window",
+        "save",
+        "disk",
+        "file"
+      ]
+    },
+    {
+      "name": "capture-fullscreen-file",
+      "title": "Capture Fullscreen to File",
+      "subtitle": "Rayshot",
+      "description": "Capture fullscreen and save to file",
+      "mode": "no-view",
+      "keywords": [
+        "screenshot",
+        "fullscreen",
+        "save",
+        "disk",
+        "file"
+      ]
+    },
+    {
+      "name": "capture-self-timer",
+      "title": "Self-Timer Capture",
+      "subtitle": "Rayshot",
+      "description": "Capture area with countdown timer",
+      "mode": "view",
+      "keywords": [
+        "screenshot",
+        "timer",
+        "delay",
+        "countdown",
+        "area"
+      ],
+      "preferences": [
+        {
+          "name": "timerDelay",
+          "type": "dropdown",
+          "required": false,
+          "title": "Timer Delay",
+          "description": "Countdown before capture",
+          "default": "3",
+          "data": [
+            {
+              "title": "3 Seconds",
+              "value": "3"
+            },
+            {
+              "title": "5 Seconds",
+              "value": "5"
+            },
+            {
+              "title": "10 Seconds",
+              "value": "10"
+            }
+          ]
+        },
+        {
+          "name": "showPreview",
+          "type": "checkbox",
+          "required": false,
+          "title": "Show Preview",
+          "description": "Show preview after capture (if disabled, uses default action)",
+          "default": true,
+          "label": "Show preview after capture"
+        },
+        {
+          "name": "defaultAction",
+          "type": "dropdown",
+          "required": false,
+          "title": "Default Action",
+          "description": "Action to perform when preview is disabled",
+          "default": "copy",
+          "data": [
+            {
+              "title": "Copy to Clipboard",
+              "value": "copy"
+            },
+            {
+              "title": "Save to File",
+              "value": "save"
+            },
+            {
+              "title": "Copy and Save",
+              "value": "both"
+            }
+          ]
+        },
+        {
+          "name": "saveLocation",
+          "type": "directory",
+          "required": false,
+          "title": "Save Location",
+          "description": "Where to save screenshots (overrides global setting)"
+        }
+      ]
+    },
+    {
+      "name": "view-history",
+      "title": "Screenshot History",
+      "subtitle": "Rayshot",
+      "description": "View and manage captured screenshots",
+      "mode": "view",
+      "keywords": [
+        "screenshot",
+        "history",
+        "gallery",
+        "recent"
+      ]
+    },
+    {
+      "name": "capture-preview",
+      "title": "Screenshot Preview",
+      "subtitle": "Rayshot",
+      "description": "Preview captured screenshot",
+      "mode": "view",
+      "disabledByDefault": true
+    }
+  ],
+  "preferences": [
+    {
+      "name": "saveLocation",
+      "type": "directory",
+      "required": false,
+      "title": "Save Location",
+      "description": "Where to save screenshots when saving to file",
+      "default": "~/Pictures"
+    },
+    {
+      "name": "playSoundEffect",
+      "type": "checkbox",
+      "required": false,
+      "title": "Sound Effect",
+      "description": "Play sound when screenshot is taken",
+      "default": true,
+      "label": "Play capture sound"
+    },
+    {
+      "name": "filenamePattern",
+      "type": "textfield",
+      "required": false,
+      "title": "Filename Pattern",
+      "description": "Pattern for screenshot filenames. Available variables: {mode}, {date}, {time}, {timestamp}",
+      "default": "Screenshot_{date}_{time}",
+      "placeholder": "Screenshot_{date}_{time}"
+    },
+    {
+      "name": "imageFormat",
+      "type": "dropdown",
+      "required": false,
+      "title": "Image Format",
+      "description": "Choose the format for saving screenshots. PNG is lossless and best for quality. JPEG offers smaller files with adjustable quality (see JPEG Quality setting below). WebP provides excellent compression with modern browser support.",
+      "default": "png",
+      "data": [
+        {
+          "title": "PNG",
+          "value": "png"
+        },
+        {
+          "title": "JPEG",
+          "value": "jpeg"
+        },
+        {
+          "title": "WebP",
+          "value": "webp"
+        }
+      ]
+    },
+    {
+      "name": "jpegQuality",
+      "type": "dropdown",
+      "required": false,
+      "title": "JPEG Quality",
+      "description": "Compression quality for JPEG format. Higher quality = larger file size. Only applies when Image Format is set to JPEG. Recommended: 85 for general use, 90 for high-quality screenshots, 75 for smaller files.",
+      "default": "85",
+      "data": [
+        {
+          "title": "High (90)",
+          "value": "90"
+        },
+        {
+          "title": "Medium (85)",
+          "value": "85"
+        },
+        {
+          "title": "Low (75)",
+          "value": "75"
+        }
+      ]
+    },
+    {
+      "name": "webpQuality",
+      "type": "dropdown",
+      "required": false,
+      "title": "WebP Quality",
+      "description": "Compression quality for WebP format. Higher quality = larger file size. Only applies when Image Format is set to WebP. WebP typically produces smaller files than JPEG at the same quality level.",
+      "default": "85",
+      "data": [
+        {
+          "title": "High (90)",
+          "value": "90"
+        },
+        {
+          "title": "Medium (85)",
+          "value": "85"
+        },
+        {
+          "title": "Low (75)",
+          "value": "75"
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.64.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/node": "20.10.0",
+    "@types/react": "^19.0.0",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
